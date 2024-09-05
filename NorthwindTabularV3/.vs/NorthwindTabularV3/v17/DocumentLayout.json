@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\Git_Reps\\KODM\\NorthwindTabularV3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE414BB-95B2-4C99-9E03-51BA72086E22}|NorthwindTabularV3\\NorthwindTabularV3.smproj|S:\\Git_Reps\\KODM\\NorthwindTabularV3\\NorthwindTabularV3\\Model.bim||{9EE154FA-5389-414A-9FA1-1D9F0221267D}",
+      "RelativeMoniker": "D:0:0:{8CE414BB-95B2-4C99-9E03-51BA72086E22}|NorthwindTabularV3\\NorthwindTabularV3.smproj|solutionrelative:NorthwindTabularV3\\Model.bim||{9EE154FA-5389-414A-9FA1-1D9F0221267D}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model.bim",
+              "DocumentMoniker": "S:\\Git_Reps\\KODM\\NorthwindTabularV3\\NorthwindTabularV3\\Model.bim",
+              "RelativeDocumentMoniker": "NorthwindTabularV3\\Model.bim",
+              "ToolTip": "S:\\Git_Reps\\KODM\\NorthwindTabularV3\\NorthwindTabularV3\\Model.bim",
+              "RelativeToolTip": "NorthwindTabularV3\\Model.bim",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-06T16:33:08.481Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

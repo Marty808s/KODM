@@ -1,0 +1,21 @@
+WITH 
+MEMBER [Measures].[SalesMonth] AS
+    SUM(
+        [Dim Date].[Year].CurrentMember,
+        [Measures].[Total Value]
+    )
+MEMBER [Measures].[FormattedSalesAmount] AS
+    FORMAT([Measures].[SalesMonth], 'Currency')
+
+SELECT
+    NON EMPTY 
+		[Dim Employees].[Region Name].MEMBERS
+    ON COLUMNS,
+
+    NON EMPTY 
+		[Dim Date].[Year].MEMBERS 
+    ON ROWS
+FROM 
+    [North]
+WHERE
+	[Measures].[FormattedSalesAmount];

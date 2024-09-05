@@ -1,0 +1,12 @@
+/*
+Roky vùèi poètu objednávek
+*/
+
+SELECT 
+	[Measures].[Fact Table Count] ON COLUMNS,
+
+	NONEMPTY(
+		[Dim Date].[Year].[Year]
+	) ON ROWS
+
+FROM [North];

@@ -1,0 +1,11 @@
+SELECT
+    NON EMPTY
+        [Dim Shippers].[Company Name].MEMBERS
+    ON ROWS,
+
+    NON EMPTY
+        [Dim Customers].[Country].MEMBERS
+    ON COLUMNS
+FROM [North]
+WHERE 
+    [Measures].[CountOrderID]

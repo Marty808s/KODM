@@ -1,0 +1,14 @@
+/*
+Shippers a poèty jejich objednávek
+*/
+
+SELECT
+    NON EMPTY
+        [Dim Shippers].[Company Name].MEMBERS
+    ON ROWS,
+
+    NON EMPTY
+        [Measures].[Fact Table Count]
+    ON COLUMNS
+FROM
+    [North];

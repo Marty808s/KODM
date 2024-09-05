@@ -1,0 +1,2881 @@
+{
+  "name": "NorthwindTabular",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "cs-CZ",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-43NMOTN Northwind",
+        "connectionString": "Provider=SQLOLEDB;Data Source=DESKTOP-43NMOTN;Initial Catalog=Northwind;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "Marty",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Categories",
+        "columns": [
+          {
+            "name": "CategoryID",
+            "dataType": "int64",
+            "sourceColumn": "CategoryID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Categories",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Categories].*   FROM [dbo].[Categories] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Categories].*   FROM [dbo].[Categories] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Categories"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "CustomerCustomerDemo",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CustomerTypeID",
+            "dataType": "string",
+            "sourceColumn": "CustomerTypeID",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CustomerCustomerDemo",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[CustomerCustomerDemo].*   FROM [dbo].[CustomerCustomerDemo] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[CustomerCustomerDemo].*   FROM [dbo].[CustomerCustomerDemo] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "CustomerCustomerDemo"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "CustomerDemographics",
+        "columns": [
+          {
+            "name": "CustomerTypeID",
+            "dataType": "string",
+            "sourceColumn": "CustomerTypeID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CustomerDesc",
+            "dataType": "string",
+            "sourceColumn": "CustomerDesc",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CustomerDemographics",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[CustomerDemographics].*   FROM [dbo].[CustomerDemographics] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[CustomerDemographics].*   FROM [dbo].[CustomerDemographics] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "CustomerDemographics"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Customers",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactName",
+            "dataType": "string",
+            "sourceColumn": "ContactName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactTitle",
+            "dataType": "string",
+            "sourceColumn": "ContactTitle",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Fax",
+            "dataType": "string",
+            "sourceColumn": "Fax",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customers",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Customers].*   FROM [dbo].[Customers] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Customers].*   FROM [dbo].[Customers] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Customers"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Employees",
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TitleOfCourtesy",
+            "dataType": "string",
+            "sourceColumn": "TitleOfCourtesy",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "BirthDate",
+            "dataType": "dateTime",
+            "sourceColumn": "BirthDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "HireDate",
+            "dataType": "dateTime",
+            "sourceColumn": "HireDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "HomePhone",
+            "dataType": "string",
+            "sourceColumn": "HomePhone",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Extension",
+            "dataType": "string",
+            "sourceColumn": "Extension",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Notes",
+            "dataType": "string",
+            "sourceColumn": "Notes",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ReportsTo",
+            "dataType": "int64",
+            "sourceColumn": "ReportsTo",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PhotoPath",
+            "dataType": "string",
+            "sourceColumn": "PhotoPath",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Employees",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Employees].*   FROM [dbo].[Employees] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Employees].*   FROM [dbo].[Employees] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Employees"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "EmployeeTerritories",
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TerritoryID",
+            "dataType": "string",
+            "sourceColumn": "TerritoryID",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "EmployeeTerritories",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[EmployeeTerritories].*   FROM [dbo].[EmployeeTerritories] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[EmployeeTerritories].*   FROM [dbo].[EmployeeTerritories] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "EmployeeTerritories"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Order Details",
+        "columns": [
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discount",
+            "dataType": "double",
+            "sourceColumn": "Discount",
+            "sourceProviderType": "Single"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Order Details",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Order Details].*   FROM [dbo].[Order Details] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Order Details].*   FROM [dbo].[Order Details] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Order Details"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Orders",
+        "columns": [
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OrderDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "RequiredDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RequiredDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ShippedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShippedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ShipVia",
+            "dataType": "int64",
+            "sourceColumn": "ShipVia",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Freight",
+            "dataType": "decimal",
+            "sourceColumn": "Freight",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "ShipName",
+            "dataType": "string",
+            "sourceColumn": "ShipName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipAddress",
+            "dataType": "string",
+            "sourceColumn": "ShipAddress",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipCity",
+            "dataType": "string",
+            "sourceColumn": "ShipCity",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipRegion",
+            "dataType": "string",
+            "sourceColumn": "ShipRegion",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipPostalCode",
+            "dataType": "string",
+            "sourceColumn": "ShipPostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipCountry",
+            "dataType": "string",
+            "sourceColumn": "ShipCountry",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Orders",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Orders].*   FROM [dbo].[Orders] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Orders].*   FROM [dbo].[Orders] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Orders"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Products",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SupplierID",
+            "dataType": "int64",
+            "sourceColumn": "SupplierID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CategoryID",
+            "dataType": "int64",
+            "sourceColumn": "CategoryID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "QuantityPerUnit",
+            "dataType": "string",
+            "sourceColumn": "QuantityPerUnit",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "UnitsInStock",
+            "dataType": "int64",
+            "sourceColumn": "UnitsInStock",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "UnitsOnOrder",
+            "dataType": "int64",
+            "sourceColumn": "UnitsOnOrder",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "ReorderLevel",
+            "dataType": "int64",
+            "sourceColumn": "ReorderLevel",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discontinued",
+            "dataType": "boolean",
+            "sourceColumn": "Discontinued",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Products",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Products].*   FROM [dbo].[Products] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Products].*   FROM [dbo].[Products] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Products"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Region",
+        "columns": [
+          {
+            "name": "RegionID",
+            "dataType": "int64",
+            "sourceColumn": "RegionID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "RegionDescription",
+            "dataType": "string",
+            "sourceColumn": "RegionDescription",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Region",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Region].*   FROM [dbo].[Region] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Region].*   FROM [dbo].[Region] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Region"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Shippers",
+        "columns": [
+          {
+            "name": "ShipperID",
+            "dataType": "int64",
+            "sourceColumn": "ShipperID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Shippers",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Shippers].*   FROM [dbo].[Shippers] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Shippers].*   FROM [dbo].[Shippers] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Shippers"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Suppliers",
+        "columns": [
+          {
+            "name": "SupplierID",
+            "dataType": "int64",
+            "sourceColumn": "SupplierID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactName",
+            "dataType": "string",
+            "sourceColumn": "ContactName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactTitle",
+            "dataType": "string",
+            "sourceColumn": "ContactTitle",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Fax",
+            "dataType": "string",
+            "sourceColumn": "Fax",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "HomePage",
+            "dataType": "string",
+            "sourceColumn": "HomePage",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Suppliers",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Suppliers].*   FROM [dbo].[Suppliers] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Suppliers].*   FROM [dbo].[Suppliers] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Suppliers"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Territories",
+        "columns": [
+          {
+            "name": "TerritoryID",
+            "dataType": "string",
+            "sourceColumn": "TerritoryID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TerritoryDescription",
+            "dataType": "string",
+            "sourceColumn": "TerritoryDescription",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "RegionID",
+            "dataType": "int64",
+            "sourceColumn": "RegionID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Territories",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Territories].*   FROM [dbo].[Territories] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Territories].*   FROM [dbo].[Territories] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Territories"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Alphabetical list of products",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "SupplierID",
+            "dataType": "int64",
+            "sourceColumn": "SupplierID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CategoryID",
+            "dataType": "int64",
+            "sourceColumn": "CategoryID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "QuantityPerUnit",
+            "dataType": "string",
+            "sourceColumn": "QuantityPerUnit",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "UnitsInStock",
+            "dataType": "int64",
+            "sourceColumn": "UnitsInStock",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "UnitsOnOrder",
+            "dataType": "int64",
+            "sourceColumn": "UnitsOnOrder",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "ReorderLevel",
+            "dataType": "int64",
+            "sourceColumn": "ReorderLevel",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discontinued",
+            "dataType": "boolean",
+            "sourceColumn": "Discontinued",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Alphabetical list of products",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Alphabetical list of products].*   FROM [dbo].[Alphabetical list of products] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Alphabetical list of products].*   FROM [dbo].[Alphabetical list of products] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Alphabetical list of products"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Category Sales for 1997",
+        "columns": [
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CategorySales",
+            "dataType": "decimal",
+            "sourceColumn": "CategorySales",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Category Sales for 1997",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Category Sales for 1997].*   FROM [dbo].[Category Sales for 1997] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Category Sales for 1997].*   FROM [dbo].[Category Sales for 1997] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Category Sales for 1997"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Current Product List",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Current Product List",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Current Product List].*   FROM [dbo].[Current Product List] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Current Product List].*   FROM [dbo].[Current Product List] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Current Product List"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Customer and Suppliers by City",
+        "columns": [
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ContactName",
+            "dataType": "string",
+            "sourceColumn": "ContactName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Relationship",
+            "dataType": "string",
+            "sourceColumn": "Relationship",
+            "sourceProviderType": "Char"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customer and Suppliers by City",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Customer and Suppliers by City].*   FROM [dbo].[Customer and Suppliers by City] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Customer and Suppliers by City].*   FROM [dbo].[Customer and Suppliers by City] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Customer and Suppliers by City"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Invoices",
+        "columns": [
+          {
+            "name": "ShipName",
+            "dataType": "string",
+            "sourceColumn": "ShipName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipAddress",
+            "dataType": "string",
+            "sourceColumn": "ShipAddress",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipCity",
+            "dataType": "string",
+            "sourceColumn": "ShipCity",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipRegion",
+            "dataType": "string",
+            "sourceColumn": "ShipRegion",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipPostalCode",
+            "dataType": "string",
+            "sourceColumn": "ShipPostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipCountry",
+            "dataType": "string",
+            "sourceColumn": "ShipCountry",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CustomerName",
+            "dataType": "string",
+            "sourceColumn": "CustomerName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Salesperson",
+            "dataType": "string",
+            "sourceColumn": "Salesperson",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OrderDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "RequiredDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RequiredDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ShippedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShippedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ShipperName",
+            "dataType": "string",
+            "sourceColumn": "ShipperName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discount",
+            "dataType": "double",
+            "sourceColumn": "Discount",
+            "sourceProviderType": "Single"
+          },
+          {
+            "name": "ExtendedPrice",
+            "dataType": "decimal",
+            "sourceColumn": "ExtendedPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Freight",
+            "dataType": "decimal",
+            "sourceColumn": "Freight",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Invoices",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Invoices].*   FROM [dbo].[Invoices] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Invoices].*   FROM [dbo].[Invoices] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Invoices"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Order Details Extended",
+        "columns": [
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discount",
+            "dataType": "double",
+            "sourceColumn": "Discount",
+            "sourceProviderType": "Single"
+          },
+          {
+            "name": "ExtendedPrice",
+            "dataType": "decimal",
+            "sourceColumn": "ExtendedPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Order Details Extended",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Order Details Extended].*   FROM [dbo].[Order Details Extended] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Order Details Extended].*   FROM [dbo].[Order Details Extended] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Order Details Extended"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Order Subtotals",
+        "columns": [
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Subtotal",
+            "dataType": "decimal",
+            "sourceColumn": "Subtotal",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Order Subtotals",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Order Subtotals].*   FROM [dbo].[Order Subtotals] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Order Subtotals].*   FROM [dbo].[Order Subtotals] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Order Subtotals"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Orders Qry",
+        "columns": [
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OrderDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "RequiredDate",
+            "dataType": "dateTime",
+            "sourceColumn": "RequiredDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ShippedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShippedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ShipVia",
+            "dataType": "int64",
+            "sourceColumn": "ShipVia",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Freight",
+            "dataType": "decimal",
+            "sourceColumn": "Freight",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "ShipName",
+            "dataType": "string",
+            "sourceColumn": "ShipName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipAddress",
+            "dataType": "string",
+            "sourceColumn": "ShipAddress",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipCity",
+            "dataType": "string",
+            "sourceColumn": "ShipCity",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipRegion",
+            "dataType": "string",
+            "sourceColumn": "ShipRegion",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipPostalCode",
+            "dataType": "string",
+            "sourceColumn": "ShipPostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShipCountry",
+            "dataType": "string",
+            "sourceColumn": "ShipCountry",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Address",
+            "dataType": "string",
+            "sourceColumn": "Address",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "sourceColumn": "PostalCode",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Orders Qry",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Orders Qry].*   FROM [dbo].[Orders Qry] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Orders Qry].*   FROM [dbo].[Orders Qry] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Orders Qry"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Product Sales for 1997",
+        "columns": [
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProductSales",
+            "dataType": "decimal",
+            "sourceColumn": "ProductSales",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Product Sales for 1997",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Product Sales for 1997].*   FROM [dbo].[Product Sales for 1997] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Product Sales for 1997].*   FROM [dbo].[Product Sales for 1997] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Product Sales for 1997"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Products Above Average Price",
+        "columns": [
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "sourceColumn": "UnitPrice",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Products Above Average Price",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Products Above Average Price].*   FROM [dbo].[Products Above Average Price] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Products Above Average Price].*   FROM [dbo].[Products Above Average Price] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Products Above Average Price"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Products by Category",
+        "columns": [
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "QuantityPerUnit",
+            "dataType": "string",
+            "sourceColumn": "QuantityPerUnit",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "UnitsInStock",
+            "dataType": "int64",
+            "sourceColumn": "UnitsInStock",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discontinued",
+            "dataType": "boolean",
+            "sourceColumn": "Discontinued",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Products by Category",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Products by Category].*   FROM [dbo].[Products by Category] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Products by Category].*   FROM [dbo].[Products by Category] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Products by Category"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Quarterly Orders",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "string",
+            "sourceColumn": "CustomerID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Quarterly Orders",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Quarterly Orders].*   FROM [dbo].[Quarterly Orders] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Quarterly Orders].*   FROM [dbo].[Quarterly Orders] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Quarterly Orders"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Sales by Category",
+        "columns": [
+          {
+            "name": "CategoryID",
+            "dataType": "int64",
+            "sourceColumn": "CategoryID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CategoryName",
+            "dataType": "string",
+            "sourceColumn": "CategoryName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ProductSales",
+            "dataType": "decimal",
+            "sourceColumn": "ProductSales",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales by Category",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Sales by Category].*   FROM [dbo].[Sales by Category] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Sales by Category].*   FROM [dbo].[Sales by Category] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sales by Category"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Sales Totals by Amount",
+        "columns": [
+          {
+            "name": "SaleAmount",
+            "dataType": "decimal",
+            "sourceColumn": "SaleAmount",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ShippedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShippedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales Totals by Amount",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Sales Totals by Amount].*   FROM [dbo].[Sales Totals by Amount] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Sales Totals by Amount].*   FROM [dbo].[Sales Totals by Amount] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sales Totals by Amount"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Summary of Sales by Quarter",
+        "columns": [
+          {
+            "name": "ShippedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShippedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Subtotal",
+            "dataType": "decimal",
+            "sourceColumn": "Subtotal",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Summary of Sales by Quarter",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Summary of Sales by Quarter].*   FROM [dbo].[Summary of Sales by Quarter] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Summary of Sales by Quarter].*   FROM [dbo].[Summary of Sales by Quarter] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Summary of Sales by Quarter"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Summary of Sales by Year",
+        "columns": [
+          {
+            "name": "ShippedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShippedDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Subtotal",
+            "dataType": "decimal",
+            "sourceColumn": "Subtotal",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Summary of Sales by Year",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " \t\t\t\tSELECT [dbo].[Summary of Sales by Year].*   FROM [dbo].[Summary of Sales by Year] ",
+              "dataSource": "SqlServer DESKTOP-43NMOTN Northwind"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " \t\t\t\tSELECT [dbo].[Summary of Sales by Year].*   FROM [dbo].[Summary of Sales by Year] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Summary of Sales by Year"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Date]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Year",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Year]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Quarter",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Quarter]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Month",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Month]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Day",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Day]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "MonthName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[MonthName]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "DayOfWeek",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[DayOfWeek]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "WeekOfYear",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[WeekOfYear]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "DateID",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[DateID]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "ADDCOLUMNS (",
+                "    CALENDAR (MIN(Orders[OrderDate]), MAX(Orders[ShippedDate])),",
+                "    \"DateID\", FORMAT([Date], \"YYYYMMDD\"),",
+                "    \"Year\", YEAR([Date]),",
+                "    \"Quarter\", QUARTER([Date]),",
+                "    \"Month\", MONTH([Date]),",
+                "    \"Day\", DAY([Date]),",
+                "    \"MonthName\", FORMAT([Date], \"MMMM\"),",
+                "    \"DayOfWeek\", WEEKDAY([Date]),",
+                "    \"WeekOfYear\", WEEKNUM([Date])",
+                ")"
+              ]
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "HierarchyDate",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month"
+              },
+              {
+                "name": "Date",
+                "ordinal": 3,
+                "column": "Date"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DimShippers",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipperID",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipperID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "CompanyName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[CompanyName]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Phone",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Phone]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "SELECTCOLUMNS (",
+                "    Shippers,",
+                "    \"ShipperID\", Shippers[ShipperID],",
+                "    \"CompanyName\", Shippers[CompanyName],",
+                "    \"Phone\", Shippers[Phone]",
+                ")"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactOrders",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "CustomerID",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[CustomerID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "OrderID",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[OrderID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[EmployeeID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipVia",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipVia]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Freight",
+            "dataType": "decimal",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Freight]",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipName]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipAddress",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipAddress]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipCity",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipCity]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipRegion",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipRegion]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipPostalCode",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipPostalCode]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShipCountry",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShipCountry]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "OrderDateID",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[OrderDateID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "RequiredDateID",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[RequiredDateID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ShippedDateID",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ShippedDateID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ProductIDs",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ProductIDs]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "SELECTCOLUMNS(",
+                "    Orders,",
+                "    \"OrderID\", Orders[OrderID],",
+                "    \"CustomerID\", Orders[CustomerID],",
+                "    \"EmployeeID\", Orders[EmployeeID],",
+                "    \"ProductIDs\", CONCATENATEX(FILTER('Order Details', 'Order Details'[OrderID] = Orders[OrderID]), 'Order Details'[ProductID], \", \"),",
+                "    //\"OrderDate\", Orders[OrderDate],",
+                "    //\"RequiredDate\", Orders[RequiredDate],",
+                "    //\"ShippedDate\", Orders[ShippedDate],",
+                "    \"ShipVia\", Orders[ShipVia],",
+                "    \"Freight\", Orders[Freight],",
+                "    \"ShipName\", Orders[ShipName],",
+                "    \"ShipAddress\", Orders[ShipAddress],",
+                "    \"ShipCity\", Orders[ShipCity],",
+                "    \"ShipRegion\", Orders[ShipRegion],",
+                "    \"ShipPostalCode\", Orders[ShipPostalCode],",
+                "    \"ShipCountry\", Orders[ShipCountry],",
+                "    \"OrderDateID\", LOOKUPVALUE(DimDate[DateID], DimDate[Date], Orders[OrderDate]),",
+                "    \"RequiredDateID\", LOOKUPVALUE(DimDate[DateID], DimDate[Date], Orders[RequiredDate]),",
+                "    \"ShippedDateID\", LOOKUPVALUE(DimDate[DateID], DimDate[Date], Orders[ShippedDate])",
+                ")"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimCustomers",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "CustomerID",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[CustomerID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "CompanyName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[CompanyName]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ContactName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ContactName]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ContactTitle",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[ContactTitle]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Address",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Address]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "City",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[City]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Region",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Region]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "PostalCode",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[PostalCode]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Country",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Country]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Phone",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Phone]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Fax",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Fax]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "SELECTCOLUMNS (",
+                "    Customers,",
+                "    \"CustomerID\", Customers[CustomerID],",
+                "    \"CompanyName\", Customers[CompanyName],",
+                "    \"ContactName\", Customers[ContactName],",
+                "    \"ContactTitle\", Customers[ContactTitle],",
+                "    \"Address\", Customers[Address],",
+                "    \"City\", Customers[City],",
+                "    \"Region\", Customers[Region],",
+                "    \"PostalCode\", Customers[PostalCode],",
+                "    \"Country\", Customers[Country],",
+                "    \"Phone\", Customers[Phone],",
+                "    \"Fax\", Customers[Fax]",
+                ")"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimProduct",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "ProductID",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Order Details[ProductID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ProductName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Products[ProductName]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Products[UnitPrice]",
+            "formatString": "#,0.00 \"Kč\";-#,0.00 \"Kč\";#,0.00 \"Kč\"",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1029\" DisplayName=\"Kč Čeština (Česká republika)\" Symbol=\"Kč\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "QuantityPerUnit",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Products[QuantityPerUnit]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "CategoryName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Categories[CategoryName]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "SUMMARIZE(",
+                "'Order Details',",
+                "'Order Details'[ProductID],",
+                "'Products'[ProductName],",
+                "'Products'[UnitPrice],",
+                "'Products'[QuantityPerUnit],",
+                "'Categories'[CategoryName]",
+                ")"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "OrderConnect",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "OrderID",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Orders[OrderID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Orders[OrderDate]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ProductID",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Products[ProductID]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "ProductName",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "Products[ProductName]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "SUMMARIZE(",
+                "    'Order Details',",
+                "    'Orders'[OrderID],",
+                "    'Orders'[OrderDate],",
+                "    'Products'[ProductID],",
+                "    'Products'[ProductName]",
+                ")"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "1c673730-6e7d-4788-89e2-c5ec453e3304",
+        "fromTable": "CustomerCustomerDemo",
+        "fromColumn": "CustomerTypeID",
+        "toTable": "CustomerDemographics",
+        "toColumn": "CustomerTypeID"
+      },
+      {
+        "name": "4bd17bfa-5e5a-4b9f-b033-808816781a8b",
+        "fromTable": "CustomerCustomerDemo",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "fb57d653-a8bd-41ba-bee2-0f6e8d4c19ad",
+        "fromTable": "EmployeeTerritories",
+        "fromColumn": "EmployeeID",
+        "toTable": "Employees",
+        "toColumn": "EmployeeID"
+      },
+      {
+        "name": "6b55c742-9ec4-411b-b5ec-2b5cd621b722",
+        "fromTable": "EmployeeTerritories",
+        "fromColumn": "TerritoryID",
+        "toTable": "Territories",
+        "toColumn": "TerritoryID"
+      },
+      {
+        "name": "6348b5ec-99f8-404e-8761-6b16af0783b1",
+        "fromTable": "Order Details",
+        "fromColumn": "OrderID",
+        "toTable": "Orders",
+        "toColumn": "OrderID"
+      },
+      {
+        "name": "009fcffa-ce2b-43cb-8bbb-59138e7cbd50",
+        "fromTable": "Order Details",
+        "fromColumn": "ProductID",
+        "toTable": "Products",
+        "toColumn": "ProductID"
+      },
+      {
+        "name": "0347ddeb-76f0-4b5b-a41e-9a44ffca975c",
+        "fromTable": "Orders",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "c89fb191-8989-41af-ae21-fff3abe2285f",
+        "fromTable": "Orders",
+        "fromColumn": "EmployeeID",
+        "toTable": "Employees",
+        "toColumn": "EmployeeID"
+      },
+      {
+        "name": "4d1279db-9d2a-472f-8bd8-9d7ad2865624",
+        "fromTable": "Orders",
+        "fromColumn": "ShipVia",
+        "toTable": "Shippers",
+        "toColumn": "ShipperID"
+      },
+      {
+        "name": "1259a4b5-9f77-472d-bfac-f9913b5d7b9d",
+        "fromTable": "Products",
+        "fromColumn": "CategoryID",
+        "toTable": "Categories",
+        "toColumn": "CategoryID"
+      },
+      {
+        "name": "b64fdc5e-45b2-45f9-b759-c01627a2ba6c",
+        "fromTable": "Products",
+        "fromColumn": "SupplierID",
+        "toTable": "Suppliers",
+        "toColumn": "SupplierID"
+      },
+      {
+        "name": "1e360000-ae4c-4f06-abea-bf42abd81016",
+        "fromTable": "Territories",
+        "fromColumn": "RegionID",
+        "toTable": "Region",
+        "toColumn": "RegionID"
+      },
+      {
+        "name": "540d7ed8-762d-465c-b470-2b88909c43e6",
+        "fromTable": "FactOrders",
+        "fromColumn": "CustomerID",
+        "toTable": "DimCustomers",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "bdd26353-460e-41a9-8e9f-c63a44b712fa",
+        "fromTable": "FactOrders",
+        "fromColumn": "ShipVia",
+        "toTable": "DimShippers",
+        "toColumn": "ShipperID"
+      },
+      {
+        "name": "f31b447b-25f5-477f-987f-24d03107983d",
+        "fromTable": "FactOrders",
+        "fromColumn": "OrderDateID",
+        "toTable": "DimDate",
+        "toColumn": "DateID"
+      },
+      {
+        "name": "ac33f62f-f85f-40d0-ba85-720fdb3f07b2",
+        "fromTable": "FactOrders",
+        "fromColumn": "RequiredDateID",
+        "toTable": "DimDate",
+        "toColumn": "DateID",
+        "isActive": false
+      },
+      {
+        "name": "ad931210-3447-4dce-8279-03acde0fcfae",
+        "fromTable": "FactOrders",
+        "fromColumn": "ShippedDateID",
+        "toTable": "DimDate",
+        "toColumn": "DateID",
+        "isActive": false
+      },
+      {
+        "name": "e74259a1-d16b-4c8f-a780-0c3d65025117",
+        "fromTable": "OrderConnect",
+        "fromColumn": "ProductID",
+        "toTable": "DimProduct",
+        "toColumn": "ProductID"
+      },
+      {
+        "name": "4113f1ae-70a4-47cc-993c-6f421ac7e59f",
+        "fromTable": "OrderConnect",
+        "fromColumn": "OrderID",
+        "toTable": "FactOrders",
+        "toColumn": "OrderID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

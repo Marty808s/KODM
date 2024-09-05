@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\Git_Reps\\KODM\\MultidimensionalProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40D314D5-F992-4D26-BC4B-9431C2658CC1}|MultidimensionalProject\\MultidimensionalProject.dwproj|S:\\Git_Reps\\KODM\\MultidimensionalProject\\MultidimensionalProject\\North.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{40D314D5-F992-4D26-BC4B-9431C2658CC1}|MultidimensionalProject\\MultidimensionalProject.dwproj|solutionrelative:MultidimensionalProject\\North.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40D314D5-F992-4D26-BC4B-9431C2658CC1}|MultidimensionalProject\\MultidimensionalProject.dwproj|S:\\Git_Reps\\KODM\\MultidimensionalProject\\MultidimensionalProject\\North.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{40D314D5-F992-4D26-BC4B-9431C2658CC1}|MultidimensionalProject\\MultidimensionalProject.dwproj|solutionrelative:MultidimensionalProject\\North.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "North.cube [Design]",
+              "DocumentMoniker": "S:\\Git_Reps\\KODM\\MultidimensionalProject\\MultidimensionalProject\\North.cube",
+              "RelativeDocumentMoniker": "MultidimensionalProject\\North.cube",
+              "ToolTip": "S:\\Git_Reps\\KODM\\MultidimensionalProject\\MultidimensionalProject\\North.cube [Design]",
+              "RelativeToolTip": "MultidimensionalProject\\North.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-10T19:38:09.699Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "North.dsv [Design]",
+              "DocumentMoniker": "S:\\Git_Reps\\KODM\\MultidimensionalProject\\MultidimensionalProject\\North.dsv",
+              "RelativeDocumentMoniker": "MultidimensionalProject\\North.dsv",
+              "ToolTip": "S:\\Git_Reps\\KODM\\MultidimensionalProject\\MultidimensionalProject\\North.dsv [Design]",
+              "RelativeToolTip": "MultidimensionalProject\\North.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-10T19:18:07.919Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

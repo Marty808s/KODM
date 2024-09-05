@@ -1,0 +1,24 @@
+/*
+Poèet objednávek na zákazníka
+*/
+WITH 
+MEMBER [Measures].[Order Count] AS 
+    SUM(
+        NONEMPTY(
+            [Measures].[Fact Table Count],
+            [Dim Customers].[Customer ID]
+        )
+    )
+
+SELECT 
+    NON EMPTY
+    {
+        [Measures].[Order Count]
+    } ON COLUMNS,
+    
+    NON EMPTY 
+    {
+        [Dim Customers].[Company Name].MEMBERS
+    } ON ROWS
+FROM 
+    [North];

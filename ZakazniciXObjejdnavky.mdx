@@ -1,0 +1,16 @@
+WITH
+MEMBER [Measures].[FormattedSalesAmount] AS
+    FORMAT([Measures].[Total Value], 'Currency')
+
+SELECT
+ NON EMPTY
+	[Dim Customers].[Company Name].MEMBERS
+ ON ROWS,
+
+ NON EMPTY
+	[Dim Date].[Year].MEMBERS
+ ON COLUMNS
+FROM
+	[North]
+WHERE
+	[Measures].[FormattedSalesAmount]

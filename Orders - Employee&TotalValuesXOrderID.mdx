@@ -1,0 +1,15 @@
+WITH
+MEMBER [Measures].[FormattedSalesAmount] AS
+    FORMAT([Measures].[Total Value], 'Currency')
+
+SELECT
+	NON EMPTY
+		[Dim Order].[Order ID].MEMBERS
+	ON ROWS,
+
+	NON EMPTY
+		[Dim Employees].[Last Name].MEMBERS 
+	ON COLUMNS
+FROM [North]
+WHERE
+	[Measures].[FormattedSalesAmount];

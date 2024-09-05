@@ -1,0 +1,21 @@
+/*
+Prodejci a jejich prodeje
+*/
+
+WITH
+MEMBER [Measures].[Sellers] AS
+	SUM(
+		EXISTING [Dim Employees].[Employee ID].CurrentMember,
+		[Measures].[Fact Table Count]
+	)
+
+SELECT
+	NON EMPTY
+		[Dim Employees].[Last Name].MEMBERS
+	ON ROWS,
+
+	NON EMPTY
+		[Measures].[Sellers] 
+	ON COLUMNS
+FROM
+[North];

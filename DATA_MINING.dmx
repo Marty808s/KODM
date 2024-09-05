@@ -1,0 +1,36 @@
+CREATE MINING STRUCTURE [CustomerOrderPred]
+(
+    [CustomerID] TEXT KEY,
+    [TotalValueOrders] DOUBLE CONTINUOUS,
+    [Year] LONG DISCRETIZED (AUTOMATIC),
+    [Month] LONG DISCRETIZED (AUTOMATIC)
+)
+WITH HOLDOUT (30 PERCENT);
+
+
+ALTER MINING STRUCTURE [CustomerOrderPred]
+ADD MINING MODEL [CustomerOrderPredModel]
+(
+    [CustomerID],
+    [TotalValueOrders] PREDICT,
+    [Year],
+    [Month]
+)
+USING Microsoft_Decision_Trees;
+
+
+INSERT INTO [CustomerOrderPred](
+    [CustomerID], [TotalValueOrders], [Year], [Month]
+)
+OPENQUERY([North],
+'SELECT CustomerID, TotalValueOrders, Year, Month FROM [North].[dbo].[Tab_CustomerOrderPred]');
+
+CALL System.ProcessStructure('CustomerOrderPred');
+
+SELECT * FROM [CustomerOrderPred].CASES;
+
+SELECT
+    [CustomerID],
+    Predict([TotalValueOrders])
+FROM
+    [CustomerOrderPredModel];

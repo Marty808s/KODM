@@ -1,0 +1,51 @@
+/*
+Porovnání poètu objednávek vùèi mìsícùm - porovnání i meziroèní
+*/
+
+WITH 
+MEMBER [Measures].[MonthYearSales] AS 
+    SUM(
+        EXISTING [Dim Date].[Year].CurrentMember *
+        EXISTING [Dim Date].[Month].CurrentMember,
+        [Measures].[Fact Table Count]
+    )
+
+SELECT 
+    NON EMPTY
+        [Measures].[MonthYearSales]
+    ON COLUMNS,
+    
+    NON EMPTY 
+    ORDER(
+        [Dim Date].[Year].MEMBERS * [Dim Date].[Month].MEMBERS,
+        [Measures].[MonthYearSales],
+        ASC
+    ) ON ROWS
+FROM 
+    [North];
+
+
+/*
+Porovnání poètu objednávek vùèi mìsícùm - ve všech letech dohromady
+*/
+
+WITH 
+MEMBER [Measures].[MonthSales] AS 
+    SUM(
+        EXISTING [Dim Date].[Month].CurrentMember,
+        [Measures].[Fact Table Count]
+    )
+
+SELECT 
+    NON EMPTY
+        [Measures].[MonthSales]
+    ON COLUMNS,
+    
+    NON EMPTY 
+    ORDER(
+        [Dim Date].[Month].MEMBERS,
+        [Measures].[MonthSales],
+        ASC
+    ) ON ROWS
+FROM 
+    [North];

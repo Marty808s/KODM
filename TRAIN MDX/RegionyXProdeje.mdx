@@ -1,0 +1,13 @@
+/*
+Regiony a jejich prodeje
+*/
+
+SELECT
+	NON EMPTY
+		[Dim Employees].[Region Name].MEMBERS
+	ON ROWS,
+
+	NON EMPTY
+		[Measures].[Fact Table Count]
+	ON COLUMNS
+FROM [North]

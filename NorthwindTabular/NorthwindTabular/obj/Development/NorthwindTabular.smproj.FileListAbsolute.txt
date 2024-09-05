@@ -1,0 +1,8 @@
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\bin\DemoModel.asdatabase
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\bin\DemoModel.deploymenttargets
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\bin\DemoModel.deploymentoptions
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\obj\Development\NorthwindTabular.smproj.AssemblyReference.cache
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\obj\Development\NorthwindTabular.smproj.CoreCompileInputs.cache
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\obj\Development\DemoModel.asdatabase
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\obj\Development\DemoModel.deploymentoptions
+S:\Git_Reps\KODM\NorthwindTabular\NorthwindTabular\obj\Development\DemoModel.deploymenttargets
